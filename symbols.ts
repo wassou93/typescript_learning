@@ -10,15 +10,15 @@ console.log(o1[uniqueKey]);
 
 console.log(`Symbol('description') is: ${String(uniqueKey)}`);
 
-const secret = Symbol('secret');
+const secret: unique symbol = Symbol('secret');
 const user = { name: 'Alice', [secret]: 123 };
 
 for (let key in user) {
   console.log(key); // only logs 'name', not the symbol
 }
 
-const arr = [1, 2, 3];
-const secret2 = Symbol('secret');
+const arr = [1, 2, 3] as number[] & { [secret2]: string };
+const secret2: unique symbol = Symbol('secret');
 
 arr[secret2] = 'hidden value';
 
@@ -36,4 +36,5 @@ for (const key of hidden_keys) {
 for (const key of [...Object.keys(arr), ...Object.getOwnPropertySymbols(arr)]) {
   console.log(key);
 }
+
 
