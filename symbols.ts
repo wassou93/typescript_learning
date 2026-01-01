@@ -17,7 +17,7 @@ for (let key in user) {
   console.log(key); // only logs 'name', not the symbol
 }
 
-const arr = [1, 2, 3] as number[] & { [secret2]: string };
+const arr = [1, 2, 3] as number[] & { [secret2]?: string };
 const secret2: unique symbol = Symbol('secret');
 
 arr[secret2] = 'hidden value';
