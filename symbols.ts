@@ -4,7 +4,7 @@ interface obj {
     [uniqueKey]: string;
 }
 
-const o1 = {[uniqueKey]: "hello, World!"};
+const o1 = {[uniqueKey]: "Hello, World!"};
 
 console.log(o1[uniqueKey]);
 

@@ -1,4 +1,3 @@
-
 let value: unknown = "hello";
 
 // Unsafe casting
