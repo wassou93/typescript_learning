@@ -9,10 +9,10 @@ console.log(typeof all);
 all = 200;
 console.log(typeof all);
 
-let myFriends = ["Osama", "Ahmed", "Sayed", 10];
+let myFriends: string[] = ["Osama", "Ahmed", "Sayed"];
 
-for (let i = 0; i < myFriends.length; i++ ) {
-    console.log(myFriends[i].repeat(3));
+for (const friend of myFriends) {
+    console.log(friend.repeat(3));
 }
 
 console.log(typeof myFriends)
